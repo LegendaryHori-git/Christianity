@@ -16,14 +16,131 @@
   }
 }
 
+html {
+  font-family: -apple-system, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "游ゴシック Medium", "メイリオ", meiryo, sans-serif;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.yubi {
+  cursor: pointer;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+
+.fixed-div {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  width: 600px;
+  overflow: auto;
+
+}
+
+.pagetop-arrow {
+  height: 10px;
+  width: 10px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: translateY(20%) rotate(-45deg);
+}
+
+.fixed-div.a {
+  transform: translateY(30px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fixed-div.vis {
+  transition: 1s;
+  transform: translateY(0px);
+
+}
+
+.page-top {
+  right: 10px;
+  bottom: 60px;
+}
+
+.page-top {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 160px;
+  background: #c5c5c5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.check li ::before {
+  content: '\e88d';
+  color: #d72439;
+  margin-right: 0.3em;
+  font-family: "fontello";
+}
+
+.check li {
+  padding-bottom: .75em;
+  margin-bottom: .75em;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.25);
+}
+
+.check2 li ::before {
+  content: '\e88d';
+  color: #d72439;
+  margin-right: 0.3em;
+  font-family: "fontello";
+}
+
+.check2 li {
+  padding-bottom: .30em;
+  margin-bottom: .30em;
+}
+
+.underber {
+  text-align: center;
+  font-size: 40px;
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+}
+
+.underber:before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 4px;
+  background-color: rgb(0, 0, 0);
+  left: 25%;
+  /* left: 50%; ※右側に当てたい場合 */
+  bottom: 0;
+}
+
+.checks ::before {
+  content: '\e88d';
+  color: #d72439;
+  margin-right: 0.3em;
+  font-family: "fontello";
+}
+
+.bgmarker {
+  background: linear-gradient(transparent 60%, #ffee00 60%);
+}
+
+.bgmarker2 {
+  background: linear-gradient(transparent 70%, #ffee00 70%);
 }
 
 @layer utilities {
